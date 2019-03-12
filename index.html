@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="bookmark" href="favicon.ico" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="container">
+    <h1>RGB to Hex Converter</h1>
+  </header>
+  <section class="basic-panel container">
+    <h4>基本版</h4>
+    <div class="row">
+      <div class="col rgb-basic-panel">
+        <h6>RGB</h6>
+        <div class="rgb-input-item">
+          <span class="rgb-title">R：(between 0 and 255)</span>
+          <input type="number" value="255" min="0" max="255" id="r-input">
+          <span class="rgb-color-display" id="r-display"></span>
+        </div>
+        <div class="rgb-input-item">
+          <span class="rgb-title">G：(between 0 and 255)</span>
+          <input type="number" value="255" min="0" max="255" id="g-input">
+          <span class="rgb-color-display" id="g-display"></span>
+        </div>
+        <div class="rgb-input-item">
+          <span class="rgb-title">B：(between 0 and 255)</span>
+          <input type="number" value="255" min="0" max="255" id="b-input">
+          <span class="rgb-color-display" id="b-display"></span>
+        </div>
+        <div id="errow-display"> </div>
+        <button class="btn-primary" onclick="getFullColorHex()">Convert</button>
+      </div>
+      <div class="col">
+        <h6>HEX</h6>
+        <div class="hex-basic-panel">
+          <input type="text" id="hex-input">
+          <span id="hex-basic-display"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="advanced-panel">
+    <h4>挑戰版</h4>
+    <div class="rgb-advanced-panel">
+      <div class="rgb-range-item">
+        <span class="range-title" id="r-range-title">R</span>
+        <input type="range" value="255" min="0" max="255" id="r-range">
+        <span class="range-display" id="r-range-display">255</span>
+      </div>
+      <div class="rgb-range-item">
+        <span class="range-title" id="g-range-title">G</span>
+        <input type="range" value="255" min="0" max="255" id="g-range">
+        <span class="range-display" id="g-range-display">255</span>
+      </div>
+      <div class="rgb-range-item">
+        <span class="range-title" id="b-range-title">B</span>
+        <input type="range" value="255" min="0" max="255" id="b-range">
+        <span class="range-display" id="b-range-display">255</span>
+      </div>
+    </div>
+    <div id="hex-advanced-panel">
+      #FFFFFF
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+
+</html>
